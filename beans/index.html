@@ -3,6 +3,7 @@
     <style>
       body {
         font-family: Arial, sans-serif;
+        margin: 0 0 0 0;
       }
 
       body h1 {
@@ -20,6 +21,17 @@
 	    color: red;
         text-decoration: none;
       }
+	  header {
+        background-color: #333;
+	    color: white;
+        text-align: center;
+        padding: 10px;
+      }
+      nav {
+      background-color: #eee;
+      padding: 20px;
+      text-align: center;
+      }
 
       .bean-image {
         width: 183px;
@@ -31,14 +43,49 @@
         font-size: 18px;
         text-align: center;
       }
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      footer cp {
+        margin: 0 0 20px 0;
+        font-size: 16px;
+      }
     </style>
   </head>
+  <header>
+    <h1>Beans</h1>
+  </header>
+    <style>
+      a {
+        color: blue;
+        text-decoration: none;
+      }
+      a:hover {
+        color: red;
+      }
+      a:visited {
+        color: purple;
+      }
+      a:active {
+        color: green;
+      }
+    </style>
+    <nav>
+      <ul>
+        <a href="/">Home</a>
+        <a href="https://en.wikipedia.org/wiki/Bean">More on Wikipedia</a>
+      </ul>
+    </nav>
   <body>
-    <h1>All About Beans</h1>
 
     <img src="bean.png" alt="A bean" class="bean-image">
-
     <p class="bean-description">
-      A bean is the seed of several plants in the family Fabaceae, which are used as vegetables for human or animal food.[1] They can be cooked in many different ways,[2] including boiling, frying, and baking, and are used in many traditional dishes throughout the world.<a href="https://en.wikipedia.org/wiki/Bean">[wikipedia]</a></p>
+      A bean is the seed of several plants in the family Fabaceae, which are used as vegetables for human or animal food.[1] They can be cooked in many different ways,<a href="https://cooking.nytimes.com/guides/21-how-to-cook-beans">[2]</a> including boiling, frying, and baking, and are used in many traditional dishes throughout the world.<a href="https://en.wikipedia.org/wiki/Bean">[wikipedia]</a></p>
+  <footer>
+    <cp>Last edited on December 30, 2022</cp>
+  </footer>
   </body>
 </html>
