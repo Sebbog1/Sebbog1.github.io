@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Language Translator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.1/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl mt-8 mb-6">Advanced Language Translator</h1>
+
+        <div class="bg-white p-4 rounded-md shadow-md">
+            <label for="inputText" class="block text-lg mb-2">Input Text:</label>
+            <textarea id="inputText" rows="4" class="w-full border-gray-300 mb-4 resize-none"></textarea>
+            <button id="translateButton" class="bg-blue-500 w-full py-2 text-white rounded-md">Translate</button>
+        </div>
+
+        <div class="bg-white mt-4 p-4 rounded-md shadow-md">
+            <label for="outputText" class="block text-lg mb-2">Output Text:</label>
+            <textarea id="outputText" rows="4" class="w-full border-gray-300 resize-none"></textarea>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        const sampleTranslation = {
+            "Language": "Sample",
+            "Words": [
+                { "Input": "language", "Output": "lingo" },
+                { "Input": "important", "Output": "vital" },
+                { "Input": "communication", "Output": "dialogue" },
+            ]
+        };
+
+        function translateText(inputText) {
+            let outputText = inputText;
+            sampleTranslation.Words.forEach(wordPair => {
+                const regex = new RegExp(`\\b${wordPair.Input}\\b`, 'gi');
+                outputText = outputText.replace(regex, wordPair.Output);
+            });
+            return outputText;
+        }
+
+        $("#translateButton").click(() => {
+            const inputText = $("#inputText").val();
+            const outputText = translateText(inputText);
+            $("#outputText").val(outputText);
+        });
+    </script>
+
+</body>
+
+</html>
